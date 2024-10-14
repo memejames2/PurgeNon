@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Purge</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a202c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: #2d3748;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #4299e1;
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      color: #cbd5e0;
+      margin-bottom: 1.5rem;
+    }
+    .script-box {
+      background-color: #1a202c;
+      padding: 1rem;
+      border-radius: 6px;
+      color: #e2e8f0;
+      font-size: 0.875rem;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    button {
+      width: 100%;
+      background-color: #4299e1;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #3182ce;
+    }
+    .icon {
+      margin-right: 8px;
+    }
+    .copied {
+      color: #48bb78;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to Purge</h1>
+    <p>Purge is a simple script with multi games supported. Please copy the script below!</p>
+    <div class="script-box">
+      <code id="scriptContent">loadstring(game:HttpGet("https://raw.githubusercontent.com/x7dJJ9vnFH23/Maintained-Fun/main/FUNC/Loader.lua", true))()</code>
+    </div>
+    <button id="copyButton">
+      <span class="icon">📋</span>
+      <span id="buttonText">Copy Script</span>
+    </button>
+  </div>
+
+  <script>
+    const copyButton = document.getElementById('copyButton');
+    const buttonText = document.getElementById('buttonText');
+    const scriptContent = document.getElementById('scriptContent').textContent;
+
+    copyButton.addEventListener('click', () => {
+      navigator.clipboard.writeText(scriptContent).then(() => {
+        buttonText.textContent = 'Copied!';
+        copyButton.classList.add('copied');
+        setTimeout(() => {
+          buttonText.textContent = 'Copy Script';
+          copyButton.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  </script>
+
+</body>
+</html>
