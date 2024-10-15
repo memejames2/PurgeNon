@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Copy Text Example</title>
+  <title>Purge</title>
   <style>
     body {
       background-color: #f7fafc;
@@ -59,8 +59,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to Our Website</h1>
-    <p>This is a sample paragraph that you can copy. It demonstrates the functionality of our copy button feature.</p>
+    <h1>Purge</h1>
+    <p>Purge is a script with multiple games supported.</p>
     <button id="copyBtn" class="btn">
       <span class="icon"></span> <!-- Replace with a copy icon -->
       <span id="btnText">Copy Text</span>
@@ -70,7 +70,7 @@
   <script>
     const copyBtn = document.getElementById('copyBtn');
     const btnText = document.getElementById('btnText');
-    const paragraphText = "This is a sample paragraph that you can copy. It demonstrates the functionality of our copy button feature.";
+    const paragraphText = "Purge is a script with multiple games supported.";
 
     copyBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(paragraphText).then(() => {
