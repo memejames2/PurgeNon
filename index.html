@@ -12,7 +12,7 @@
       align-items: center;
       min-height: 100vh;
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "Impact", fantasy;
     }
     .container {
       background-color: white;
@@ -62,7 +62,7 @@
     <h1>Welcome to Our Website</h1>
     <p>This is a sample paragraph that you can copy. It demonstrates the functionality of our copy button feature.</p>
     <button id="copyBtn" class="btn">
-      <span class="icon">📋</span> <!-- Replace with a copy icon -->
+      <span class="icon"></span> <!-- Replace with a copy icon -->
       <span id="btnText">Copy Text</span>
     </button>
   </div>
@@ -74,9 +74,9 @@
 
     copyBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(paragraphText).then(() => {
-        btnText.innerHTML = '<span class="icon">✔️</span> Copied!'; // Replace with a checkmark icon
+        btnText.innerHTML = '<span class="icon"></span> Copied!'; // Replace with a checkmark icon
         setTimeout(() => {
-          btnText.innerHTML = '<span class="icon">📋</span> Copy Text'; // Reset icon
+          btnText.innerHTML = '<span class="icon"></span> Copy Text'; // Reset icon
         }, 2000);
       });
     });
